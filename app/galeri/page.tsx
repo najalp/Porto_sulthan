@@ -1,0 +1,9 @@
+import type {Metadata} from "next";
+import Link from "next/link";
+import PageIntro from "@/components/PageIntro";
+import Photo from "@/components/Photo";
+import {photoAssets} from "@/lib/assets";
+import {Arrow} from "@/components/Icons";
+export const metadata:Metadata={title:"Galeri Warisan Balangan",description:"Kumpulan dokumentasi berlisensi terbuka tentang Balangan, jembatan sejarah, situs religi, dan budaya Dayak Deah."};
+export default function Galeri(){return <main id="main"><PageIntro index="04" eyebrow="GALERI DAERAH" title={<>Merawat cerita<br/><em>melalui gambar.</em></>} description="Dokumentasi terkurasi tentang ruang, tradisi, dan situs bersejarah di Balangan. Setiap foto memiliki sumber, pemilik karya, dan keterangan lisensi."/>
+<section className="section gallery-page"><div className="container"><div className="gallery-top"><span>ARSIP FOTO BERLISENSI TERBUKA</span><span>{String(photoAssets.length).padStart(2,'0')} FOTO DARI WIKIMEDIA COMMONS</span></div><div className="gallery-grid">{photoAssets.map((asset,i)=><article key={asset.id} className={`gallery-tile tile-${i%5}`}><Photo id={asset.id} className="fill-image"/><div className="gallery-meta"><div><span>{String(i+1).padStart(2,'0')} / {asset.role}</span><h2>{asset.title}</h2></div><a href={asset.source} target="_blank" rel="noreferrer" aria-label={`Buka sumber ${asset.title}`}><Arrow diagonal/></a></div></article>)}</div><p className="source-disclaimer">Lisensi seluruh foto yang ditampilkan: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0). Hak atas karya tetap berada pada masing-masing pembuat. Penyesuaian ukuran/crop melalui CSS tidak mengubah berkas asli. Silakan periksa sumber sebelum memakai ulang atau membuat adaptasi.</p><Link href="/sumber" className="underlined-link">Lihat semua kredit dan ketentuan penggunaan <Arrow diagonal/></Link></div></section></main>}

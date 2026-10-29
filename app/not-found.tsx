@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main id="main" className="not-found"><div className="container"><span className="section-number">404 / HALAMAN TIDAK DITEMUKAN</span><h1>Jejak cerita ini<br/><em>belum tersedia.</em></h1><p>Halaman yang dicari mungkin sudah berpindah. Kembali ke beranda atau jelajahi Balangan.</p><Link className="btn btn-dark" href="/">Kembali ke beranda ↗</Link></div></main>}
