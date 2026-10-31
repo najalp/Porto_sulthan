@@ -11,6 +11,7 @@ export const metadata: Metadata = {
  title: {default:"Sulthan Mustafa Iberahim | BERDAYA Balangan", template:"%s | Sulthan BERDAYA"},
  description:"Mengenal Sulthan Mustafa Iberahim, finalis Nanang Galuh Balangan 2026, advokasi BERDAYA (Berbudaya dengan Gaya), dan kisah budaya delapan kecamatan di Kabupaten Balangan.",
  applicationName:"BERDAYA — Sulthan Mustafa Iberahim",
+ icons:{icon:[{url:"/favicon-berdaya-20261031.png",type:"image/png",sizes:"128x128"}],shortcut:"/favicon-berdaya-20261031.png",apple:"/apple-icon-berdaya-20261031.png"},
  robots:{index:true,follow:true},
  openGraph:{type:"website",locale:"id_ID",title:"Sulthan Mustafa Iberahim — BERDAYA",description:"Berakar pada budaya, bergerak bersama generasi muda."},
  twitter:{card:"summary_large_image",title:"Sulthan Mustafa Iberahim — BERDAYA",description:"Berakar pada budaya, bergerak bersama generasi muda."},

@@ -51,7 +51,7 @@ Foto Wikimedia Commons yang digunakan memiliki lisensi **CC BY-SA 4.0**; kredit 
 ## Media lokal terbaru
 
 - `public/images/rumah-hj-syukur-lampihong.jpg`: dokumentasi Rumah Hj Syukur di Lampihong; dokumen Disdikbud menyebutnya Rumah H. Sjoekoer.
-- `public/images/berdaya-logo.png`, `app/favicon.ico`, `app/icon.png`, dan `app/apple-icon.png`: logo yang diberikan untuk header, footer, tab browser, dan layar utama ponsel.
+- `public/images/berdaya-logo.png`, `public/favicon-berdaya-20261031.png`, `public/favicon.ico`, dan `public/apple-icon-berdaya-20261031.png`: logo untuk header, footer, tab browser, dan layar utama ponsel. URL ikon versi baru diatur di `app/layout.tsx` agar cache favicon lama tidak dipakai.
 - `public/audio-basinggah-di-balangan.mp3`: musik yang diberikan, dicoba putar otomatis saat halaman dibuka dan diputar berulang. Browser yang memblokir autoplay bersuara baru memutarnya setelah interaksi pertama pengunjung. Metadata berkas menyebut judul *Basinggah di Balangan* dan artis *Promosipariwisata.Balangan*. Pastikan izin pemakaian publikasi untuk seluruh media lokal.
 
 ## Deploy ke Vercel
