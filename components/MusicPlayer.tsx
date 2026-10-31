@@ -1,29 +1,32 @@
 "use client";
 
-import {useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 
 export default function MusicPlayer() {
-  const audio = useRef<HTMLAudioElement>(null);
-  const [playing, setPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  async function toggle() {
-    if (!audio.current) return;
-    if (audio.current.paused) {
-      try {
-        await audio.current.play();
-      } catch {
-        setPlaying(false);
-      }
-    } else {
-      audio.current.pause();
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    function start() {
+      if (audio?.paused) void audio.play().catch(() => {});
     }
-  }
+    function stopListening() {
+      window.removeEventListener("click", start);
+      window.removeEventListener("keydown", start);
+    }
 
-  return <div className="music-player">
-    <audio ref={audio} src="/audio-basinggah-di-balangan.mp3" preload="none" loop onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} />
-    <button type="button" onClick={toggle} aria-label={playing ? "Jeda musik Basinggah di Balangan" : "Putar musik Basinggah di Balangan"} aria-pressed={playing}>
-      <span className="music-player-icon" aria-hidden="true">{playing ? "Ⅱ" : "▶"}</span>
-      <span><strong>{playing ? "JEDA MUSIK" : "PUTAR MUSIK"}</strong><small>Basinggah di Balangan</small></span>
-    </button>
-  </div>;
+    window.addEventListener("click", start);
+    window.addEventListener("keydown", start);
+    audio.addEventListener("playing", stopListening);
+    start();
+
+    return () => {
+      stopListening();
+      audio.removeEventListener("playing", stopListening);
+    };
+  }, []);
+
+  return <audio ref={audioRef} src="/audio-basinggah-di-balangan.mp3" autoPlay loop preload="auto" />;
 }
