@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type {ReactNode} from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MusicPlayer from "@/components/MusicPlayer";
 import {siteUrl} from "@/lib/site-url";
 import "./globals.css";
 
@@ -15,4 +16,4 @@ export const metadata: Metadata = {
  twitter:{card:"summary_large_image",title:"Sulthan Mustafa Iberahim — BERDAYA",description:"Berakar pada budaya, bergerak bersama generasi muda."},
 };
 export const viewport: Viewport = {themeColor:"#f6f0e7",width:"device-width",initialScale:1};
-export default function RootLayout({children}:{children:ReactNode}){return <html lang="id"><body><a href="#main" className="skip-link">Langsung ke konten</a><Header/>{children}<Footer/></body></html>}
+export default function RootLayout({children}:{children:ReactNode}){return <html lang="id"><body><a href="#main" className="skip-link">Langsung ke konten</a><Header/>{children}<Footer/><MusicPlayer/></body></html>}

@@ -11,7 +11,7 @@ Website portofolio personal dengan eksplorasi budaya Kabupaten Balangan, dikemba
 - `/balangan/[slug]` — 8 halaman wilayah dengan sumber yang dicantumkan
 - `/galeri` — koleksi foto terbuka dari Wikimedia Commons
 - `/sumber` — atribusi foto, lisensi, dan sumber data daerah
-- `/kontak` — halaman kolaborasi (kontak pribadi belum diumumkan)
+- `/kontak` — halaman kolaborasi dengan tautan Instagram dan TikTok resmi yang diberikan
 
 ## Menjalankan di komputer lokal
 
@@ -44,9 +44,15 @@ Format portrait 3:4, sekitar 1200×1600 piksel disarankan. Bila file belum terse
 
 Daftar dan sumber ada di `lib/assets.ts` serta halaman `/sumber`. Foto dimuat secara daring dari Wikimedia Commons menggunakan jalur `Special:FilePath` dan **tidak disimpan** dalam arsip proyek. Oleh sebab itu, pada perangkat tanpa internet atau jika server sumber tidak merespons, ilustrasi fallback akan muncul. Untuk situs produksi yang menginginkan foto 100% tersedia secara lokal, unduh setiap foto dari halaman sumber, ikuti ketentuan lisensi, kemudian perbarui komponen `Photo.tsx` menggunakan aset lokal.
 
-Semua foto yang digunakan dikurasi dari halaman Wikimedia Commons dengan lisensi **CC BY-SA 4.0**; kredit pemilik dan tautan sumber tampil pada foto dan halaman kredit. Jika membuat karya turunan, patuhi kewajiban atribusi, perubahan dan *share-alike* sesuai lisensi. Hindari menganggap foto sebagai persetujuan atau dukungan terhadap advokasi.
+Foto Wikimedia Commons yang digunakan memiliki lisensi **CC BY-SA 4.0**; kredit pemilik dan tautan sumber tampil pada foto dan halaman kredit. Jika membuat karya turunan, patuhi kewajiban atribusi, perubahan dan *share-alike* sesuai lisensi. Hindari menganggap foto sebagai persetujuan atau dukungan terhadap advokasi.
 
 **Jangan menggunakan gambar hasil pencarian umum secara otomatis.** Gambar di sumber berita pemerintah dan portal media mempunyai aturan hak cipta tersendiri; materi semacam itu dipakai sebagai rujukan tulisan saja, bukan sebagai foto website.
+
+## Media lokal terbaru
+
+- `public/images/rumah-hj-syukur-lampihong.jpg`: dokumentasi Rumah Hj Syukur di Lampihong; dokumen Disdikbud menyebutnya Rumah H. Sjoekoer.
+- `public/images/berdaya-logo.png` dan `app/icon.png`: logo yang diberikan untuk header, footer, dan favicon.
+- `public/audio-basinggah-di-balangan.mp3`: musik yang diberikan, diputar hanya setelah pengunjung menekan tombol. Metadata berkas menyebut judul *Basinggah di Balangan* dan artis *Promosipariwisata.Balangan*. Pastikan izin pemakaian publikasi untuk seluruh media lokal.
 
 ## Deploy ke Vercel
 
@@ -74,8 +80,8 @@ Tidak membutuhkan database, API key, atau token untuk fitur versi ini.
 - Konfirmasi **ejaan identitas**, status **finalis**, dan informasi pendidikan.
 - Pastikan klien menyetujui tanggal lahir yang ditampilkan dan cerita mengenai empat percobaan Akpol.
 - Klien perlu mengonfirmasi naskah kutipan yang merupakan hasil parafrasa.
-- Masukkan **foto asli** dan izin penggunaannya.
-- Kontak belum diberikan; jangan memasang email, Instagram, atau nomor telepon rekaan.
+- Foto utama sudah terpasang; periksa kembali izin publikasinya.
+- Instagram dan TikTok memakai tautan yang diberikan; jangan memasang email atau nomor telepon rekaan.
 - Tinjau ulang narasi budaya bersama narasumber lokal ketika memungkinkan; konten tidak mengklaim semua situs sebagai tradisi khas kecamatan.
 - Verifikasi penampilan foto dari Commons saat situs online karena file dihosting oleh pihak ketiga.
 - Tautan situs referensi `batang.site` tidak disalin atau diambil asetnya; desain dirancang dengan identitas tersendiri.

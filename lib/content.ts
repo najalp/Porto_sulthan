@@ -8,6 +8,7 @@ export type District = {
   featured: string;
   details: {heading: string; description: string}[];
   imageId?: string;
+  featurePhoto?: {id: string; title: string; caption: string};
   source: {label: string; url: string}[];
   note?: string;
 };
@@ -18,6 +19,7 @@ export const districtDataSources = {
   dukcapil: {label: "Disdukcapil Balangan — agregat delapan kecamatan", url: "https://disdukcapil.balangankab.go.id/index.php/home/satukata"},
   mesiwah: {label: "DPRD Kalsel — Mesiwah Pare Gumboh di Desa Liyu dan Gunung Riut", url: "https://dprd.kalselprov.go.id/dprd-kalsel-apresiasi-tradisi-mesiwah-pare-gumboh-sebagai-warisan-budaya-dayak-deah/"},
   baharin: {label: "Media Center Balangan — Aruh Adat Baharin di Desa Tabuan", url: "https://mediacenter.balangankab.go.id/berita/aruh-adat-baharin-wujud-syukur-panen-dan-pelestarian-budaya-dayak-balangan-fqyEr"},
+  rumahSjoekoer: {label: "Disdikbud Balangan — daftar cagar budaya, Rumah H. Sjoekoer", url: "https://upload.balangankab.go.id/dokumen/data/sakip/2025/disdikbud/rencana-kerja/RANCANGAN%20AKHIR%20PERUBAHAN%20RENJA%20DISDIKBUD%20TAHUN%202024.pdf"},
 };
 
 export const districts: District[] = [
@@ -45,8 +47,9 @@ export const districts: District[] = [
     details: [
       {heading: "Jembatan Besi Lampihong", description: "Jembatan peninggalan masa kolonial ini didokumentasikan oleh Tim WikiBanua 2.0. Arsitekturnya memperlihatkan lapisan sejarah infrastruktur daerah."},
       {heading: "Makam Datu Martika", description: "Situs di Desa Tampang ini tercatat sebagai tujuan wisata religi. Foto arsip tersedia melalui Wikimedia Commons."},
+      {heading: "Rumah Hj Syukur", description: "Rumah bersejarah di Lampihong ini tercantum dalam daftar cagar budaya Disdikbud Balangan dengan ejaan Rumah H. Sjoekoer. Dokumentasi foto diberikan untuk portofolio ini."},
       {heading: "Lampihong bagi Sulthan", description: "Kecamatan ini menjadi titik awal kisah pribadi Sulthan yang lahir dan tumbuh di Balangan. Bagian pribadi ini bersumber dari naskah yang disampaikan klien."}
-    ], imageId: "lampihong", source: [districtDataSources.transport, districtDataSources.rkpd],
+    ], imageId: "lampihong", featurePhoto: {id:"rumah-syukur",title:"Rumah Hj Syukur",caption:"Rumah di Lampihong yang tercatat sebagai Rumah H. Sjoekoer dalam dokumen Disdikbud Balangan. Foto: dokumentasi yang diberikan pengguna."}, source: [districtDataSources.transport, districtDataSources.rkpd, districtDataSources.rumahSjoekoer],
   },
   {
     slug: "batu-mandi", name: "Batu Mandi", number: "04", category: "Bentang alam", featured: "Agrowisata dan kehidupan agraris",

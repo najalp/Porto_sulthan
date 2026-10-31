@@ -22,7 +22,7 @@ Dokumentasi yang dikurasi dari Wikimedia Commons. Semua foto memiliki lisensi **
 3. Berkas foto **tidak dikemas dalam ZIP**. Saat website online, komponen `Photo.tsx` mengambil foto dari Wikimedia Commons. Tersedia fallback saat gambar tidak dapat dimuat.
 4. Foto dari laporan Pemda, media online dan dokumentasi acara yang tidak memiliki lisensi terbuka **tidak dimasukkan**. Tautan sumber tersebut hanya dipakai untuk rujukan teks.
 5. Foto Sulthan harus diberikan atau disetujui klien. Simpan sebagai `public/images/sulthan-portrait.jpg`.
-6. Foto untuk Paringin Selatan, Awayan, dan Tebing Tinggi belum diperoleh dari sumber dengan izin pemakaian yang cukup jelas. Untuk sementara ditampilkan grafis pengganti, bukan foto wilayah lain yang disamarkan.
+6. Foto untuk Paringin Selatan, Awayan, Tebing Tinggi, serta Rumah Hj Syukur di Lampihong telah diberikan untuk proyek ini. Kredit ditampilkan sebagai dokumentasi yang diberikan pengguna, terpisah dari foto Wikimedia Commons. Periksa izin publikasinya.
 
 Lisensi lengkap: https://creativecommons.org/licenses/by-sa/4.0/
 

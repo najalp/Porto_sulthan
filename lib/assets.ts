@@ -19,6 +19,7 @@ export const photoAssets: PhotoAsset[] = [
 ];
 export type LocalPhotoAsset = {id:string; title:string; localPath:string; author:string; description:string};
 export const localPhotoAssets: LocalPhotoAsset[] = [
+  {id:"rumah-syukur",title:"Rumah Hj Syukur",localPath:"/images/rumah-hj-syukur-lampihong.jpg",author:"Dokumentasi yang diberikan pengguna",description:"Bangunan Rumah Hj Syukur di Lampihong"},
   {id:"paringin-selatan-local",title:"Masjid Al-Akbar Balangan",localPath:"/images/paringin-selatan-masjid-al-akbar.png",author:"Dokumentasi yang diberikan pengguna",description:"Tampak depan Masjid Al-Akbar Balangan"},
   {id:"tebing-tinggi-local",title:"Lanskap Tebing Tinggi",localPath:"/images/tebing-tinggi-lanskap.png",author:"Dokumentasi yang diberikan pengguna",description:"Bebatuan dan sungai di kawasan Tebing Tinggi"},
   {id:"awayan-local",title:"Lanskap Awayan",localPath:"/images/awayan-lanskap.png",author:"Dokumentasi yang diberikan pengguna",description:"Lanskap perairan di kawasan Awayan"},
