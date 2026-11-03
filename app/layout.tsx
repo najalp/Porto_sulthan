@@ -11,10 +11,10 @@ export const metadata: Metadata = {
  title: {default:"Sulthan Mustafa Iberahim | BERDAYA Balangan", template:"%s | Sulthan BERDAYA"},
  description:"Mengenal Sulthan Mustafa Iberahim, finalis Nanang Galuh Balangan 2026, advokasi BERDAYA (Berbudaya dengan Gaya), dan kisah budaya delapan kecamatan di Kabupaten Balangan.",
  applicationName:"BERDAYA — Sulthan Mustafa Iberahim",
- icons:{icon:[{url:"/favicon-berdaya-20261031.png",type:"image/png",sizes:"128x128"}],shortcut:"/favicon-berdaya-20261031.png",apple:"/apple-icon-berdaya-20261031.png"},
+ icons:{icon:[{url:"/favicon-berdaya-20261103.png",type:"image/png",sizes:"128x128"}],shortcut:"/favicon-berdaya-20261103.png",apple:"/apple-icon-berdaya-20261103.png"},
  robots:{index:true,follow:true},
- openGraph:{type:"website",locale:"id_ID",title:"Sulthan Mustafa Iberahim — BERDAYA",description:"Berakar pada budaya, bergerak bersama generasi muda."},
- twitter:{card:"summary_large_image",title:"Sulthan Mustafa Iberahim — BERDAYA",description:"Berakar pada budaya, bergerak bersama generasi muda."},
+ openGraph:{type:"website",locale:"id_ID",title:"Sulthan Mustafa Iberahim — BERDAYA",description:"Berakar pada budaya, bergerak bersama generasi muda.",images:[{url:"/logo.jpeg",width:1402,height:1122,alt:"Logo BERDAYA"}]},
+ twitter:{card:"summary_large_image",title:"Sulthan Mustafa Iberahim — BERDAYA",description:"Berakar pada budaya, bergerak bersama generasi muda.",images:[{url:"/logo.jpeg",width:1402,height:1122,alt:"Logo BERDAYA"}]},
 };
 export const viewport: Viewport = {themeColor:"#f6f0e7",width:"device-width",initialScale:1};
 export default function RootLayout({children}:{children:ReactNode}){return <html lang="id"><body><a href="#main" className="skip-link">Langsung ke konten</a><Header/>{children}<Footer/><MusicPlayer/></body></html>}
